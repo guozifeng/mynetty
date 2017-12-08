@@ -30,7 +30,13 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public void transfer(String out, String in, Double money) {
 		accountDao.outMoney(out, money);
-		//int i = 1/0;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int i = 1/0;
 		accountDao.inMoney(in, money);
 
 	}
