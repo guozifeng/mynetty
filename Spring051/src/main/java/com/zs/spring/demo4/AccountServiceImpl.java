@@ -16,7 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, readOnly = false)
 public class AccountServiceImpl implements AccountService {
 
-	// 注入转账的DAO
+	/**
+	 *  注入转账的DAO
+	 */
 	private AccountDao accountDao;
 
 	/**
