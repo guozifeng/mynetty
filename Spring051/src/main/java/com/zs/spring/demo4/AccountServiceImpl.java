@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  *                     rollbackFor :发生哪些异常回滚 noRollbackFor :发生哪些异常不回滚
  *                     rollbackForClassName 根据异常类名回滚
  */
-@Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, readOnly = false)
+@Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, readOnly = false)
 public class AccountServiceImpl implements AccountService {
 
 	/**
